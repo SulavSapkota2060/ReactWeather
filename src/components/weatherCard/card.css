@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+.card {
+  height: 550px;
+  width: 400px;
+  margin: auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 0px 10px #ccc;
+  transition: transform;
+  transition-duration: 0.3s;
+  padding:20px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 20px #ccc;
+  cursor: pointer;
+  transform: translate3d(0px, -4px, 0px);
+}

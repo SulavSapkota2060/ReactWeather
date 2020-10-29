@@ -1,0 +1,21 @@
+.spin{
+    height:3rem;
+    width: 3rem;
+    margin:auto;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    border-top:none;
+    animation-name: spinner;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes spinner{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

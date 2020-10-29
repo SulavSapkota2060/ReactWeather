@@ -1,0 +1,70 @@
+
+
+.clearweather {
+  background-image: url("../../assets/clearweather.png");
+  margin-top: 10px;
+  background-size: 150px;
+  background-repeat: no-repeat;
+  height: 150px;
+}
+.clearsky {
+  background-image: url("../../assets/nightsky.png");
+  margin-top: 10px;
+  background-size: 150px;
+  background-repeat: no-repeat;
+  height: 150px;
+}
+.fewclouds {
+  background-image: url("../../assets/fewclouds.png");
+  margin-top: 10px;
+  background-size: 150px;
+  background-repeat: no-repeat;
+  height: 150px;
+}
+.scatteredclouds {
+  background-image: url("../../assets/scatteredclouds.png");
+  margin-top: 10px;
+  background-size: 150px;
+  background-repeat: no-repeat;
+  height: 150px;
+}
+.brokenclouds {
+  background-image: url("../../assets/brokencloud.png");
+  margin-top: 10px;
+  background-size: 150px;
+  background-repeat: no-repeat;
+  height: 150px;
+}
+.showerrain {
+  background-image: url("../../assets/showerrain.png");
+  margin-top: 10px;
+  background-size: 150px;
+  background-repeat: no-repeat;
+  height: 150px;
+}
+.rain {
+  background-image: url("../../assets/Rain.png");
+  margin-top: 10px;
+  background-size: 150px;
+  background-repeat: no-repeat;
+  height: 150px;
+}
+.thunderstorm {
+  background-image: url("../../assets/thunderstorm.png");
+  margin-top: 10px;
+  background-size: 150px;
+  background-repeat: no-repeat;
+  height: 150px;
+}
+.snow {
+  background-image: url("../../assets/Snow.png");
+  height: 150px;
+  font-size: 150px;
+}
+.mist {
+  background-image: url("../../assets/mist.png");
+  margin-top: 10px;
+  background-size: 150px;
+  background-repeat: no-repeat;
+  height: 150px;
+}
