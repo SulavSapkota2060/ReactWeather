@@ -1,0 +1,15 @@
+.AboutCard {
+  width: 300px;
+  margin: auto;
+  margin-top: 9%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgb(182, 173, 173);
+  transition: transform 0.3s;
+}
+.AboutCard:hover {
+  box-shadow: 0 0 50px rgb(182, 173, 173);
+  transform: translate3d(0, -5px, 0);
+  cursor: pointer;
+}
