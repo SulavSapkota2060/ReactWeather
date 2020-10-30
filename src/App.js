@@ -1,8 +1,10 @@
+import { useEffect } from 'react';
 import './App.css';
 import ErrorBoundary from './components/hoc/error/error'
 import Layout from './components/layout/layout'
 
 function App() {
+ 
   return (
     <div className="App">
       <ErrorBoundary>

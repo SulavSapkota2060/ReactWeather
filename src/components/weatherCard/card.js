@@ -3,30 +3,48 @@ import "./card.css";
 import WeatherIcon from '../weatherIcon/WeatherIcon'
 
 const Card = (props) => {
+  let theme = null
+  if(props.theme === 'dark'){
+    theme = {
+      backgroundColor:"black",
+      color:"white"
+    }
+  }
+  else{
+    theme={
+      backgroundColor:"white",
+      color:"black"
+    }
+  }
+  console.log(props.data.cod)
   if(props.data.cod === 200){
       return (
-        <div className="card">
+        <div style={theme} className="card">
           <h1>
             <u>{props.name}</u>
-          </h1><hr/>
+          </h1>
+          <hr color="white" />
           <div
             className="topLevel"
             style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}
           >
-            <WeatherIcon
-              weatherId={props.data.weather[0].id}
-              type={props.data.weather[0].icon}
-            />
+            <div style={{backgroundColor:"white", borderRadius:"100%"}}>
+              <WeatherIcon
+                weatherId={props.data.weather[0].id}
+                type={props.data.weather[0].icon}
+              />
+            </div>
             <div className="temps">
-              <h1 style={{ marginTop: "45px" }}>
+              <p style={{ marginTop: "20px" }}>{props.data.sys.country}</p>
+              <h1>
                 {props.data.main.temp} <sup>o</sup>F
               </h1>
               Min-Max:{props.data.main.temp_min}-{props.data.main.temp_max}
             </div>
           </div>
-          <hr />
+          <hr color="white" />
           <b>{props.data.weather[0].description.toUpperCase()}</b>
-          <hr />
+          <hr color="white" />
 
           <p>Pressure : {props.data.main.pressure} Pa</p>
           <p>
@@ -44,12 +62,19 @@ const Card = (props) => {
         </div>
       );
   }
- else{
+ else if(props.data.cod == 404){
      return (
-       <div className="card">
-         <h1>Please enter city name in the search box.</h1>
+       <div style={theme} className="card">
+         <h1 style={{color:"red"}}>City not found</h1>
        </div>
      );
+ }
+ else{
+   return(
+     <div className="card">
+       <h1>Type city name.</h1>
+     </div>
+   )
  }
    
 };
