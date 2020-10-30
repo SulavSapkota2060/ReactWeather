@@ -5,6 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id=%20LsyCNjwpkmbRsjRC&response_type=token&redirect_uri=http://localhost:8000/accounts/arcgis/login/callback/
 
 ### `npm start`
 
