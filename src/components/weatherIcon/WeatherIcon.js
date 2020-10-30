@@ -39,13 +39,6 @@ const WeatherIcon = (props) => {
       icon = (
         <div
           className="brokenclouds"
-          style={{
-            marginTop: "10px",
-            backgroundSize: "100px",
-            backgroundRepeat: "no-repeat",
-            height: "100px",
-            float: "left",
-          }}
         ></div>
       );
       break;
