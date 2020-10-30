@@ -70,7 +70,7 @@ class Main extends Component {
         </div>
         <div className="search">
           <input
-            placeholder="Enter the name of the city eg. Kathmandu"
+            placeholder="Enter the name of the city/country eg. New York"
             type="text"
             className="form-control"
           />
