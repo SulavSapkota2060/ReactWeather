@@ -1,7 +1,6 @@
 import React from "react";
-import Aux from "../hoc/AuxWrapper/auxwrap";
 import Main from "../appbuild/main"
-import {BrowserRouter as Router, Switch, Route, BrowserRouter} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route,} from 'react-router-dom'
 import About from '../../directories/aboutme/about'
 import Nav from '../../components/navbar/navbar'
 

@@ -2,12 +2,14 @@ import React from 'react'
 import Aux from '../../components/hoc/AuxWrapper/auxwrap'
 import './about.css'
 
-const About = () => {
-    document.body.style.backgroundColor="#eee"
+const About = props => {
+    document.body.style.backgroundColor="#eee";
     return(
+
         <Aux>
             <div className="AboutCard">
                 <div>
+                
                     <h1>Hi! I am Sulav Sapkota</h1>
                 </div>
                 <div>
