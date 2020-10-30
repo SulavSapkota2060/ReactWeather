@@ -12,7 +12,7 @@ class Main extends Component {
   };
 
   spin = null;
-   i = <i class="fa fa-moon-o" style={{fontSize:"30px"}}></i>
+  i = (<i class="fa fa-moon-o" style={{ fontSize: "30px" }}></i>);
 
   changeCityHandler = (e) => {
     this.spin = <Spinner />;
@@ -41,32 +41,39 @@ class Main extends Component {
       this.setState({ theme: "dark" });
       document.body.style.backgroundColor = "#121212";
       document.body.style.color = "white";
-         this.i = (
-           <i
-             style={{ color: "white", fontSize: "30px" }}
-             class="fa fa-sun-o"
-             
-           ></i>
-         );
-
+      this.i = (
+        <i style={{ color: "white", fontSize: "30px" }} class="fa fa-sun-o"></i>
+      );
     } else if (this.state.theme === "dark") {
       this.setState({ theme: "light" });
-      document.body.style.backgroundColor = "white";
+      document.body.style.backgroundColor = "#eee";
       document.body.style.color = "black";
-         this.i = <i class="fa fa-moon-o" style={{fontSize:"30px"}}></i>;
-
+      this.i = <i class="fa fa-moon-o" style={{ fontSize: "30px" }}></i>;
     }
+  };
+  componentDidMount() {
+    document.body.style.backgroundColor = "#eee";
   }
-
   render() {
     return (
       <Aux>
         <div className="title">
-          <button style={{float:"right",border:"none",background:"none",margin:"10px"}} onClick={this.changeThemeHandler}>{this.i}</button>
-          <h2>Weather Application</h2>
-          <p>
+          <button
+            style={{
+              float: "right",
+              border: "none",
+              background: "none",
+              margin: "10px",
+            }}
+            onClick={this.changeThemeHandler}
+          >
+            {this.i}
+          </button>
+          <div>
+            <h2>Weather Application</h2>
+
             <a href="http://sulavsapkota.000webhostapp.com">Sulav Sapkota</a>
-          </p>
+          </div>
         </div>
         <div className="search">
           <input
