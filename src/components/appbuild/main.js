@@ -8,9 +8,11 @@ class Main extends Component {
   state = {
     name: null,
     data: null,
+    theme: "light",
   };
 
   spin = null;
+   i = <i class="fa fa-moon-o" style={{fontSize:"30px"}}></i>
 
   changeCityHandler = (e) => {
     this.spin = <Spinner />;
@@ -22,7 +24,7 @@ class Main extends Component {
     if (prevState.name !== this.state.name) {
       console.log("ENTERED");
       fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${this.state.name}&appid=cdc6775592b5c25b4450d17a226d7e8f`
+        `http://api.openweathermap.org/data/2.5/weather?q=${this.state.name}&appid=cdc6775592b5c25b4450d17a226d7e8f&units=imperial`
       )
         .then((r) => r.json())
         .then((pr) => {
@@ -34,23 +36,35 @@ class Main extends Component {
     }
   }
 
-  componentDidMount() {
-    fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${this.state.name}&appid=cdc6775592b5c25b4450d17a226d7e8f`
-    )
-      .then((r) => r.json())
-      .then((pr) => {
-        this.setState({ data: pr });
-      });
+  changeThemeHandler = () => {
+    if (this.state.theme === "light") {
+      this.setState({ theme: "dark" });
+      document.body.style.backgroundColor = "#121212";
+      document.body.style.color = "white";
+         this.i = (
+           <i
+             style={{ color: "white", fontSize: "30px" }}
+             class="fa fa-sun-o"
+             
+           ></i>
+         );
+
+    } else if (this.state.theme === "dark") {
+      this.setState({ theme: "light" });
+      document.body.style.backgroundColor = "white";
+      document.body.style.color = "black";
+         this.i = <i class="fa fa-moon-o" style={{fontSize:"30px"}}></i>;
+
+    }
   }
 
   render() {
     return (
       <Aux>
         <div className="title">
+          <button style={{float:"right",border:"none",background:"none",margin:"10px"}} onClick={this.changeThemeHandler}>{this.i}</button>
           <h2>Weather Application</h2>
           <p>
-            
             <a href="http://sulavsapkota.000webhostapp.com">Sulav Sapkota</a>
           </p>
         </div>
@@ -69,7 +83,11 @@ class Main extends Component {
         </div>
         {this.spin}
         {this.state.data != null ? (
-          <Card name={this.state.name} data={this.state.data} />
+          <Card
+            theme={this.state.theme}
+            name={this.state.name}
+            data={this.state.data}
+          />
         ) : null}
       </Aux>
     );
